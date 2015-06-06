@@ -66,7 +66,7 @@
         </div>
 
         <script>
-            var cesta = getQueryVariable("slozka") + "/" + getQueryVariable("obrazek");
+            var cesta = getQueryVariable("slozka") + "/" + getQueryVariable("obrazek") + ".JPG";
             document.getElementById("obrazek").innerHTML = 
                 "<h2>" + getTitle() + "</h2><img src=\"" + cesta + "\" id=fotka><br><br><a href=\"" + getQueryVariable("slozka") + ".html\">Zpět</a>";
         </script>
