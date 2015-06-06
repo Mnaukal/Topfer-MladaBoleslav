@@ -1,0 +1,235 @@
+body {
+    background: #EEE8AA;
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    /*overflow: hidden;*/
+}
+
+img {
+    border: 0px;
+}
+
+/*
+    Hlavička
+*/
+
+#hlavicka {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background: #8B4513;
+    top: 0px;
+    z-index: 1;
+    color: #FFF;
+    text-align: center;
+}
+
+/* 
+    Menu
+*/
+
+#menu {
+    list-style-type: none;
+    margin: 0px auto;
+    text-align: center;
+    margin-left: 10%;
+    font-size: 25px;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: #FFF;
+    padding: 0px 10px;    
+}
+
+#menu li {
+    float: left;
+    padding: 10px 10px;
+    height: 30px;
+    transition: 0.5s;
+    color: #FFF;
+}
+
+#menu li:hover {
+    background: #2e1901;
+}
+
+/*
+    Mapa
+*/
+
+#mapa-container {
+    position: absolute;
+    top: 50px;
+    bottom: 0px;
+    left: 0%;  
+    right: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#mapa-inner {
+    position: absolute;
+    width: 1920px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+}
+
+
+#mapa {
+    width: 100%;
+}
+
+.misto {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    background: #8B4513;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.misto:hover {
+    background: #2e1901;
+    height: 115px;
+}
+
+.vyssi {
+    font-size: 17px;
+}
+
+.vyssi:hover {    
+    height: 130px;
+}
+
+.misto img {
+    width: 90px;
+    height: 90px;
+}
+
+#radouc {
+    top: 17%;
+    left: 36%;
+}
+
+#skoda {
+    top: 45%;
+    left: 45%;
+}
+
+#hrad {
+    top: 68%;
+    left: 33.8%;
+}
+
+#templ {
+    top: 55%;
+    left: 34.6%;
+}
+
+#hrbitov {
+    top: 73%;
+    left: 40.2%; 
+}
+
+#kostel {
+    top: 60%;
+    left: 44%; 
+}
+
+/*
+    Obsah
+*/
+#obsah {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+#levy {
+    width: 40%; 
+    float: left;
+    padding: 5px;
+}
+
+#pravy {
+    width: 55%;
+    float: right;
+    text-align: justify;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;   
+}
+
+h2 {
+    color: #2e1901;
+    margin-bottom: 2px;
+
+}
+
+h3 {
+    margin-bottom: 2px;
+}
+
+h4 {
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+p {
+    margin: 0px;
+    text-indent: 15px;
+}
+
+.velky {
+    width: 98%;
+    padding: 1%;
+    margin: 0px;
+}
+
+.maly {
+    float: left;
+    width: 48%;
+    padding: 1%;
+    margin: 0px;
+}
+
+
+/*
+    Fotogalerie
+*/
+
+#obrazek {
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#fotka {
+    width: 50%;
+}
+
+#obrazek a {
+    font-size: 25px;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+/*
+    Další
+*/
+
+@media (min-width: 1500px) {
+	#menu {
+    font-size: 25px;  
+   }
+}

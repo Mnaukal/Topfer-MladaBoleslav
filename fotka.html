@@ -1,0 +1,74 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="generator" content="PSPad editor, www.pspad.com">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="style.css" type="text/css">   
+        <title>Fotografie - Mladá Boleslav</title>
+
+        <script>
+            function getQueryVariable(variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            }
+
+            function getTitle() 
+            {
+                var slozka = getQueryVariable("slozka");
+                switch (slozka)
+                {
+                    case "radouc":
+                        return "NPP Radouč";
+                        break;
+                    case "skoda":
+                        return "Škoda Muzeum";
+                        break;
+                    case "hrad":
+                        return "Hrad";
+                        break;
+                    case "templ":
+                        return "Templ";
+                        break;
+                    case "hrbitov":
+                        return "Židovský hřbitov";
+                        break;
+                    case "kostel":
+                        return "Kostel sv. Havla";
+                        break;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div id="hlavicka">
+            <ul id="menu">
+                <a href="index.html"><li>Mapa</li></a>
+                <a href="radouc.html"><li>Radouč</li></a>
+                <a href="skoda.html"><li>Škoda Muzeum</li></a>
+                <a href="hrad.html"><li>Hrad</li></a>
+                <a href="templ.html"><li>Templ</li></a>
+                <a href="hrbitov.html"><li>Židovský hřbitov</li></a>
+                <a href="kostel.html"><li>Havelský kostel</li></a>
+            </ul>
+        </div>
+
+        <div id="obrazek">
+
+        </div>
+
+        <script>
+            var cesta = getQueryVariable("slozka") + "/" + getQueryVariable("obrazek");
+            document.getElementById("obrazek").innerHTML = 
+                "<h2>" + getTitle() + "</h2><img src=\"" + cesta + "\" id=fotka><br><br><a href=\"" + getQueryVariable("slozka") + ".html\">Zpět</a>";
+        </script>
+    </body>
+</html>
