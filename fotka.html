@@ -44,6 +44,15 @@
                         break;
                 }
             }
+            
+            function getNext()
+            {
+                var soucasne = getQueryVariable("obrazek")
+                if(soucasne == 5)
+                    soucasne = 0;
+                soucasne++;
+                return soucasne;
+            }
         </script>
 
     </head>
@@ -68,7 +77,7 @@
         <script>
             var cesta = getQueryVariable("slozka") + "/" + getQueryVariable("obrazek") + ".JPG";
             document.getElementById("obrazek").innerHTML = 
-                "<h2>" + getTitle() + "</h2><img src=\"" + cesta + "\" id=fotka><br><br><a href=\"" + getQueryVariable("slozka") + ".html\">Zpět</a>";
+                "<h2>" + getTitle() + "</h2><a href=\"fotka.html?slozka=" + getQueryVariable("slozka") + "&obrazek=" + getNext() + "\"><img src=\"" + cesta + "\" id=fotka></a><br><br><a href=\"" + getQueryVariable("slozka") + ".html\">Zpět</a>";
         </script>
     </body>
 </html>
